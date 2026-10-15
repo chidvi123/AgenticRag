@@ -18,6 +18,8 @@ docs = [UnstructuredURLLoader(urls=[url],chunking_strategy="basic",max_character
 
 docs_list = [item for sublist in docs for item in sublist]
 
+# splitting 
+
 text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
     chunk_size=250,chunk_overlap=0
 )
